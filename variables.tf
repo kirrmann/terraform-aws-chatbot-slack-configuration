@@ -24,6 +24,11 @@ variable "sns_topic_arns" {
   description = "The ARNs of the SNS topics that deliver notifications to AWS Chatbot."
 }
 
+variable "guardrail_policies" {
+  type        = list(string)
+  description = "The Policies used as Channel Guardrails in AWS Chatbot."
+}
+
 variable "tags" {
   type        = map(string)
   default     = {}
