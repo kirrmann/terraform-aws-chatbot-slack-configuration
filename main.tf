@@ -14,6 +14,7 @@ resource "aws_cloudformation_stack" "chatbot_slack_configuration" {
     SlackChannelIdParameter    = var.slack_channel_id
     SlackWorkspaceIdParameter  = var.slack_workspace_id
     SnsTopicArnsParameter      = join(",", var.sns_topic_arns)
+    GuardrailPoliciesParameter = join(",", var.guardrail_policies)
   }
 
   tags = var.tags
