@@ -23,6 +23,9 @@ Parameters:
   SnsTopicArnsParameter:
     Type: CommaDelimitedList
     Description: The ARNs of the SNS topics that deliver notifications to AWS Chatbot.
+  GuardrailPoliciesParameter:
+    Type: CommaDelimitedList
+    Description: The Policies used as Channel Guardrails in AWS Chatbot.
 
 Resources:
   SlackChannelConfiguration:
@@ -34,6 +37,7 @@ Resources:
       SlackChannelId: !Ref SlackChannelIdParameter
       SlackWorkspaceId: !Ref SlackWorkspaceIdParameter
       SnsTopicArns: !Ref SnsTopicArnsParameter
+      GuardrailPolicies: !Ref GuardrailPoliciesParameter
 
 Outputs:
   ConfigurationArn:
